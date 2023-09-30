@@ -9,7 +9,7 @@ public class GerenciadorScoreArquivo implements GerenciadorScores {
 
 
     @Override
-    public void adicionar(Score score) {  // Linha 7
+    public void adicionar(Score score) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(ARQUIVO_SCORES, true))) {
             writer.println(score.getJogador() + "," + score.getPontos());
         } catch (IOException e) {
