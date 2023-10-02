@@ -1,10 +1,11 @@
-package service.ddd.implement;
-import modelos.ddd.Score;
-import service.ddd.GerenciadorScores;
+package impl;
+import modelos.Score;
+import service.gerenciadorScores;
 
 import java.io.*;
 
-public class GerenciadorScoreArquivo implements GerenciadorScores {
+
+public class gerenciadorScoreArquivoImpl implements gerenciadorScores {
     private static final String ARQUIVO_SCORES = "scores.txt";
 
 
@@ -21,17 +22,26 @@ public class GerenciadorScoreArquivo implements GerenciadorScores {
     public void consultar(String jogador) {
         try (BufferedReader reader = new BufferedReader(new FileReader(ARQUIVO_SCORES))) {
             String linha;
+            boolean jogadorEncontrado = false;
+            int totalPontos = 0;
+
             while ((linha = reader.readLine()) != null) {
                 String[] partes = linha.split(",");
                 if (partes.length == 2 && partes[0].equals(jogador)) {
-                    System.out.println("Score  encontrado: " + linha);
-                    return;
+                    System.out.println("Score encontrado: " + linha);
+                    int pontos = Integer.parseInt(partes[1]);
+                    totalPontos += pontos;
+                    jogadorEncontrado = true;
                 }
             }
-            System.out.println("Score não encontrado para o jogador: " + jogador);
+
+            if (jogadorEncontrado) {
+                System.out.println("Total de pontos para o jogador " + jogador + ": " + totalPontos);
+            } else {
+                System.out.println("Score não encontrado para o jogador: " + jogador);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }

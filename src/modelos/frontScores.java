@@ -1,13 +1,12 @@
-package modelos.ddd;
-import service.ddd.GerenciadorScores;
-import service.ddd.implement.GerenciadorScoreArquivo;
+package modelos;
+import impl.gerenciadorScoreArquivoImpl;
 
 import java.util.Scanner;
 
-public class FrontScores {
-    private final GerenciadorScores gerenciadorScores;
+public class frontScores {
+    private final service.gerenciadorScores gerenciadorScores;
 
-    public FrontScores(GerenciadorScores gerenciadorScores) {
+    public frontScores(service.gerenciadorScores gerenciadorScores) {
         this.gerenciadorScores = gerenciadorScores;
 
     }
@@ -60,8 +59,8 @@ public class FrontScores {
 
     }
     public static void main(String[] args) {
-        GerenciadorScores gerenciadorScores = new GerenciadorScoreArquivo();
-        FrontScores frontScores = new FrontScores(gerenciadorScores);
+        service.gerenciadorScores gerenciadorScores = new gerenciadorScoreArquivoImpl();
+        frontScores frontScores = new frontScores(gerenciadorScores);
         frontScores.dialogar();
     }
 }

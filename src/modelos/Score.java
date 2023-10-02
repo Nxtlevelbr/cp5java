@@ -1,4 +1,4 @@
-package modelos.ddd;
+package modelos;
 
 public class Score {
     private final String jogador;
