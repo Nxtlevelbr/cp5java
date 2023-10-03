@@ -10,7 +10,7 @@ public class GerenciadorScoresArquivo implements GerenciadorScores {
     private final String arquivo = "scores.txt";
 
     public GerenciadorScoresArquivo() {
-        carregar();
+        ler();
     }
 
     @Override
@@ -34,7 +34,7 @@ public class GerenciadorScoresArquivo implements GerenciadorScores {
         }
     }
 
-    private void carregar() {
+    private void ler() {
         scores.clear();
         try (BufferedReader reader = new BufferedReader(new FileReader(arquivo))) {
             String line;
