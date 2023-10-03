@@ -2,7 +2,9 @@ package service;
 
 import modelos.Score;
 
+import java.util.List;
+
 public interface gerenciadorScores {
     void adicionar(Score score);
-    void consultar(String jogador);
+    List<Score> consultar(String jogador);
 }
