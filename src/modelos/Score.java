@@ -1,8 +1,8 @@
 package modelos;
 
 public class Score {
-    private String nome;
-    private int pontuacao;
+    private final String nome;
+    private final int pontuacao;
 
     public Score(String nome, int pontuacao) {
         this.nome = nome;

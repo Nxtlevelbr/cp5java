@@ -6,8 +6,8 @@ import java.util.Scanner;
 import java.util.List;
 
 public class FrontScores {
-    private GerenciadorScores gerenciadorScores = new GerenciadorScoresArquivo();
-    private Scanner scanner = new Scanner(System.in);
+    private final GerenciadorScores gerenciadorScores = new GerenciadorScoresArquivo();
+    private final Scanner scanner = new Scanner(System.in);
 
     public void dialogar() {
         System.out.println("Bem-vindo ao Gerenciador de Scores!");

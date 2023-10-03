@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciadorScoresArquivo implements GerenciadorScores {
-    private List<Score> scores = new ArrayList<>();
-    private String arquivo = "scores.txt";
+    private final List<Score> scores = new ArrayList<>();
+    private final String arquivo = "scores.txt";
 
     public GerenciadorScoresArquivo() {
         carregar();
