@@ -1,13 +1,11 @@
-package impl;
+package service.impl;
 import modelos.Score;
 import service.gerenciadorScores;
-
 import java.io.*;
+import java.util.List;
 
-
-public class gerenciadorScoreArquivoImpl implements gerenciadorScores {
+public class gerenciadorScoresArquivo implements gerenciadorScores {
     private static final String ARQUIVO_SCORES = "scores.txt";
-
 
     @Override
     public void adicionar(Score score) {
@@ -19,7 +17,7 @@ public class gerenciadorScoreArquivoImpl implements gerenciadorScores {
     }
 
     @Override
-    public void consultar(String jogador) {
+    public List<Score> consultar(String jogador) {
         try (BufferedReader reader = new BufferedReader(new FileReader(ARQUIVO_SCORES))) {
             String linha;
             boolean jogadorEncontrado = false;
@@ -43,5 +41,6 @@ public class gerenciadorScoreArquivoImpl implements gerenciadorScores {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 }

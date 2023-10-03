@@ -1,5 +1,5 @@
 package modelos;
-import impl.gerenciadorScoreArquivoImpl;
+import service.impl.gerenciadorScoresArquivo;
 
 import java.util.Scanner;
 
@@ -59,7 +59,7 @@ public class frontScores {
 
     }
     public static void main(String[] args) {
-        service.gerenciadorScores gerenciadorScores = new gerenciadorScoreArquivoImpl();
+        service.gerenciadorScores gerenciadorScores = new gerenciadorScoresArquivo();
         frontScores frontScores = new frontScores(gerenciadorScores);
         frontScores.dialogar();
     }

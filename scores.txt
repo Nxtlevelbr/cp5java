@@ -4,3 +4,5 @@ Nicolas,10000
 Nicolas,10000
 Nicolas,12
 Nicolas,2444
+Nicolas,100000
+Nicolas,10000
