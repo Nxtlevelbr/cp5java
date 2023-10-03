@@ -6,9 +6,12 @@ import java.util.Scanner;
 import java.util.List;
 
 public class FrontScores {
+    //Cria uma instância do GerenciadorScores
     private final GerenciadorScores gerenciadorScores = new GerenciadorScoresArquivo();
+    //Cria uma instância do Scanner
     private final Scanner scanner = new Scanner(System.in);
 
+    //Método que interage com o usuário
     public void dialogar() {
         System.out.println("Bem-vindo ao Gerenciador de Scores!");
 
@@ -33,6 +36,7 @@ public class FrontScores {
         }
     }
 
+    //Método que exibe o menu de opções
     private void menu() {
         System.out.println("\nOpções:");
         System.out.println("1. Adicionar Score");
@@ -41,6 +45,7 @@ public class FrontScores {
         System.out.print("Escolha uma opção: ");
     }
 
+    //Método que permite ao usuário adicionar um novo score
     private void adicionar() {
         System.out.print("Digite o nome do jogador: ");
         String nome = scanner.nextLine();
@@ -53,6 +58,7 @@ public class FrontScores {
         System.out.println("Score adicionado com sucesso!");
     }
 
+    //Método que lista todos os scores já registrados
     private void listar() {
         List<Score> scores = gerenciadorScores.consultar();
         System.out.println("\nScores registrados:");
@@ -61,6 +67,7 @@ public class FrontScores {
         }
     }
 
+    //Método principal que inicia a interação com o usuário
     public static void main(String[] args) {
         FrontScores frontScores = new FrontScores();
         frontScores.dialogar();

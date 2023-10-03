@@ -8,3 +8,5 @@ Nicolas,100000
 Nicolas,10000
 Nicolas,100000
 Nicolas,150000
+Fernando,1
+Fernando,23
