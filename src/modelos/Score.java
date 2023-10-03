@@ -1,24 +1,19 @@
 package modelos;
 
 public class Score {
-    private final String jogador;
-    private final int pontos;
+    private String nome;
+    private int pontuacao;
 
-    public Score(String jogador, int pontos) {
-        this.jogador = jogador;
-        this.pontos = pontos;
+    public Score(String nome, int pontuacao) {
+        this.nome = nome;
+        this.pontuacao = pontuacao;
     }
 
-    public String getJogador() {
-        return jogador;
+    public String getNome() {
+        return nome;
     }
 
-    public int getPontos() {
-        return pontos;
-    }
-
-    @Override
-    public String toString  (){
-        return "Jogador: " + jogador +  ", Pontos: " + pontos;
+    public int getPontuacao() {
+        return pontuacao;
     }
 }
