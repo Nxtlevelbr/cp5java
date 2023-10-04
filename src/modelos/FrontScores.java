@@ -1,3 +1,6 @@
+//Nicolas Eiti Inohue - RM98057
+//Marcel Prado Soddano - RM99941
+
 package modelos;
 import service.GerenciadorScores;
 import service.impl.GerenciadorScoresArquivo;
