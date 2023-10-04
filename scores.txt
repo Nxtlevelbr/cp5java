@@ -4,3 +4,6 @@ Fernando,100
 Fernando,89
 Marcel,406
 Marcel,505
+Nicolas,10
+Marcel,100
+Marcel,123123

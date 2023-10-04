@@ -38,32 +38,32 @@ public class FrontScores {
 
     //Método que exibe o menu de opções
     private void menu() {
-        System.out.println("\nOpções:");
-        System.out.println("1. Adicionar Score");
-        System.out.println("2. Listar Scores");
-        System.out.println("3. Sair");
+        System.out.println("\nMENU PRINCIPAL:");
+        System.out.println("(1) Adicionar Score");
+        System.out.println("(2) Listar Scores");
+        System.out.println("(3) Sair");
         System.out.print("Escolha uma opção: ");
     }
 
     //Método que permite ao usuário adicionar um novo score
     private void adicionar() {
-        System.out.print("Digite o nome do jogador: ");
+        System.out.print("Jogador: ");
         String nome = scanner.nextLine();
-        System.out.print("Digite a pontuação: ");
+        System.out.print("Pontos: ");
         int pontuacao = scanner.nextInt();
         scanner.nextLine();
 
         Score score = new Score(nome, pontuacao);
         gerenciadorScores.adicionar(score);
-        System.out.println("Score adicionado com sucesso!");
+        System.out.println("Score adicionado!");
     }
 
     //Método que lista todos os scores já registrados
     private void listar() {
         List<Score> scores = gerenciadorScores.consultar();
-        System.out.println("\nScores registrados:");
+        System.out.println("\nLista de scores:");
         for (Score score : scores) {
-            System.out.println(score.getNome() + ": " + score.getPontuacao());
+            System.out.println("- " + score.getPontuacao() + " : " + score.getNome());
         }
     }
 
